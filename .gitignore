@@ -4,8 +4,8 @@ _brief.md
 config/
 .csv
 .xlsx
+.env
 .venv/
 typesense-data/
 typesense-data_old/
 jsonl_files/
-.env/
