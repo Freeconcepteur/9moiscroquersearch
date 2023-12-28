@@ -4,8 +4,14 @@ from flask import Flask, request
 import os
 from functions_db_to_typesense import export_table_to_jsonl, create_collection_and_import_data, search9mois
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
+@app.route("/")
+def home():
+    return "Bienvenue sur mon serveur Flask!"
 
 # Create json files from database and import them into Typesense
 @app.route("/9moisacroquer/UpdateCollection", methods=['GET'])
@@ -29,10 +35,12 @@ def update_collection():
 def search_collection():
     query = request.args.get('query')
     try:
-        search9mois(query)
-        return json.dumps({"Success": "Query results"})
+        # search9mois(query)
+        return json.dumps(search9mois(query))
     except Exception as e:
         return json.dumps({"Error": str(e)})
+    
+    
 
 if __name__ == '__main__':
     app.run(debug=True) 
