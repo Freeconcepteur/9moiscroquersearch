@@ -1,8 +1,9 @@
 import mysql.connector
 import json
-from dotenv import load_dotenv
 import os
 from datetime import date, datetime
+import requests
+from dotenv import load_dotenv
 
 # Charger les variables d'environnement depuis .env
 load_dotenv()
