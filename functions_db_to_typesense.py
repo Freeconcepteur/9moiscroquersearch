@@ -113,7 +113,7 @@ def create_collection_and_import_data(jsonl_file_path):
 
 def formate_query(query):
 # importer le fichier stopwords-fr.json
-    with open('stopwords-fr.json', 'r') as f:
+    with open('stopwords-fr.json', 'r', encoding='UTF-8') as f:
         stop_words = json.load(f)
     # Diviser la phrase en une liste de mots
     words = query.split()

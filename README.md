@@ -28,7 +28,7 @@ services:
     command: '--data-dir /data --api-key=<API KEY> --enable-cors'
 ```
 
-In both cases, after create the docker-compose.yml, you have to create the typesense-data directory and execute the docker-compose.
+Dans les deux cas, après avoir créé le docker-compose.yml, vous devez créer le répertoire typesense-data et exécuter le docker-compose.
 
 ```sh
 mkdir $(pwd)/typesense-data
