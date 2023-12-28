@@ -1,3 +1,11 @@
+.ipynb_checkpoints/
+plan.md
+_brief.md
+config/
+.csv
+.xlsx
 .env
-jsonl_files
-typesense-data
+.venv/
+typesense-data/
+typesense-data_old/
+jsonl_files/
