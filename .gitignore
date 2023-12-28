@@ -9,4 +9,3 @@ config/
 typesense-data/
 typesense-data_old/
 jsonl_files/
-__pycache__
