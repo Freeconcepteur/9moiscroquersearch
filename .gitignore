@@ -1,0 +1,10 @@
+.ipynb_checkpoints/
+plan.md
+_brief.md
+config/
+.csv
+.xlsx
+.venv/
+typesense-data/
+typesense-data_old/
+jsonl_files/
