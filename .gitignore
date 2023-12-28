@@ -8,3 +8,4 @@ config/
 typesense-data/
 typesense-data_old/
 jsonl_files/
+.env/
