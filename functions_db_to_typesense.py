@@ -111,6 +111,22 @@ def create_collection_and_import_data(jsonl_file_path):
     )
     print(f"Importé dans {collection_name}: {response.status_code}")
 
+def formate_query(query):
+# importer le fichier stopwords-fr.json
+    with open('stopwords-fr.json', 'r') as f:
+        stop_words = json.load(f)
+    # Diviser la phrase en une liste de mots
+    words = query.split()
+
+    # Filtrer les mots que vous souhaitez conserver
+    filtered_words = [word for word in words if word.lower() not in stop_words]
+
+    # Rejoindre les mots dans une nouvelle phrase
+    new_query = ' '.join(filtered_words)
+
+    return new_query
+
+
 def search9mois(query):
     # Fonction pour effectuer une recherche sur toutes les collections dans Typesense.
 
@@ -123,6 +139,7 @@ def search9mois(query):
         headers={"X-TYPESENSE-API-KEY": typesense_api_key}
     )
     collections = json.loads(collections_response.text)
+    query = formate_query(query)
 
     # Recherche dans chaque collection
     results = {}
@@ -130,9 +147,9 @@ def search9mois(query):
         collection_name = collection['name']
         search_response = requests.get(
             f"{typesense_host}/collections/{collection_name}/documents/search",
-            params={"q": query, "query_by": "*"},
+            params={"q": query, "query_by": "*", "num_typos": 1},
             headers={"X-TYPESENSE-API-KEY": typesense_api_key}
         )
         results[collection_name] = json.loads(search_response.text)
-        
+
     return results
