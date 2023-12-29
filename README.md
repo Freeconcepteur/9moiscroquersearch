@@ -95,7 +95,7 @@ python tests/test.py
 ### Demo
 Pour l’exécution de la démonstration suffit d’ouvrir la page ci-dessous dans un navigateur:
 
-__demo_html/search.html__
+``` demo_html/search.html ```
 
 ### Contribution
 Les fiers participants sont:
