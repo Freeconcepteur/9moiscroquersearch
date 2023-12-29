@@ -35,8 +35,7 @@ def update_collection():
 def search_collection():
     query = request.args.get('query')
     try:
-        # search9mois(query)
-        return json.dumps(search9mois(query))
+        return json.dumps(search9mois(query)) 
     except Exception as e:
         return json.dumps({"Error": str(e)})
     
