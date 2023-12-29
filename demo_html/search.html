@@ -37,6 +37,11 @@
     #results {
         padding: 20px;
     }
+    #results_json {
+        max-width: 100%;
+        max-height: 300px;
+        overflow: auto;
+    }
     .answer, #results_json {
         margin-bottom: 20px;
         border: 1px solid #ccc;
@@ -61,12 +66,33 @@
 <div id="results"></div>
 
 <script>
+    function displayResults(data) {
+        let resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = '';
+
+        // Itérer sur chaque catégorie
+        for (let category in data) {
+            if (data.hasOwnProperty(category)) {
+                let hits = data[category].hits;
+                
+                // Itérer sur chaque élément de la catégorie
+                hits.forEach(hit => {
+                    // Modifiez cette partie selon la structure de vos données
+                    resultsDiv.innerHTML += `<div class="answer"><h4>${hit.document.title || ''}</h4><div class="content">${hit.document.content || ''}</div></div>`;
+                });
+            }
+        }
+    }
+
+
     document.getElementById('searchButton').addEventListener('click', function() {
+   
     var query = document.getElementById('searchInput').value;
     fetch(`http://127.0.0.1:5000/9moisacroquer/SearchCollection?query=${query}`)
         .then(response => response.json())
         .then(data => {
             document.getElementById('results_json').textContent = JSON.stringify(data, null, 2);
+            displayResults(data);
         })
         .catch(error => console.error('Error:', error));
     });
