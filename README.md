@@ -78,7 +78,7 @@ http://localhost:5000/9moisacroquer/UpdateCollection?table_name=food
 
 * soit pour effectuer une recherche:
 exemple:
-on entre dans la barre de recherche les termes à rechercher et le serveur va faire plusieurs requêtes dans les tables préalablement chargées à l'adresse suivante:
+on entre dans la barre de recherche les termes à rechercher et le serveur va faire plusieurs requêtes dans les tables, préalablement chargées, à l'adresse suivante:
 http://localhost:5000/9moisacroquer/SearchCollection
 si les termes sont: carences en fer, il va rechercher tous les textes contenant "fer", "carences" et "carences fer".
 
