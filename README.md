@@ -65,7 +65,23 @@ __functions_db_to_typesense.py__ contient des fonctions essentielles pour export
 ### Flask Server
 
 ### Utilisation
-[Instructions sur la façon d'utiliser le projet, y compris la mise en place de l'environnement, l'exécution des scripts, et toute autre étape nécessaire.]
+Pour lancer le server flask, il faut entrer la ligne de commande ci-dessous dans le terminal:
+```sh
+flask --app server.py --debug run
+```
+Le server flask permet de configurer des routes (url) qui vont être utilisée:
+
+* soit pour charger une table: 
+exemple: 
+Pour charger la table food on va taper:
+http://localhost:5000/9moisacroquer/UpdateCollection?table_name=food
+
+* soit pour effectuer une recherche:
+exemple:
+on entre dans la barre de recherche les termes à rechercher et le serveur va faire plusieurs requêtes dans les tables préalablement chargées à l'adresse suivante:
+http://localhost:5000/9moisacroquer/SearchCollection
+si les termes sont: carences en fer, il va rechercher tous les textes contenant "fer", "carences" et "carences fer".
+
 
 ### Contribution
 [Informations sur la façon de contribuer au projet, y compris les directives de contribution, le processus de soumission des pull requests, etc.]
