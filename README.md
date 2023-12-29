@@ -65,7 +65,7 @@ __functions_db_to_typesense.py__ contient des fonctions essentielles pour export
 - __export_table_to_jsonl()__ : convertir la table sélectionnée et ses champs au format JSON.
 - __create_collection_and_import_data()__ : Charger la base de données au format JSON dans la structure d’index Typesense.
 
-### Flask Server
+## Flask Server
 
 ### Utilisation
 Pour lancer le server flask, il faut entrer la ligne de commande ci-dessous dans le terminal:
@@ -84,6 +84,62 @@ exemple:
 on entre dans la barre de recherche les termes à rechercher et le serveur va faire plusieurs requêtes dans les tables, préalablement chargées, à l'adresse suivante:
 http://localhost:5000/9moisacroquer/SearchCollection
 si les termes sont: carences en fer, il va rechercher tous les textes contenant "fer", "carences" et "carences fer".
+
+### Structure de réponse SearchCollection:
+```py
+{
+  "recommendations": { # Nom de la table
+    "facet_counts": [],
+    "found": 1,
+    "hits": [
+      {
+        "document": { # Colonnes de la table
+          "description": "Si vous faites votre mayonnaise maison (contient des oeufs crus), consommez cet aliment dans les heures qui suivent sa préparation.\n            Si vous l'achetez en version industrielle, veillez à bien respecter les dates de consommation et consommez-le directement après ouverture.\n            Vous pouvez également essayer notre recette de mayonnaise sans oeuf.",
+          "el_id": 20,
+          "id": "19",
+          "img": "/images/recommandations/autorise_mais.png",
+          "status": "autorise_mais",
+          "title": "plat_mayo"
+        },
+        "highlight": { # Highlight extrait exactement la partie du texte où le terme recherché a été trouvé
+          "description": {
+            "matched_tokens": [
+              "recette"
+            ], # L'extrait
+            "snippet": "pouvez également essayer notre <mark>recette</mark> de mayonnaise sans oeuf."
+          }
+        },
+        "highlights": [ # Highlight extrait exactement la partie du texte où le terme recherché a été trouvé
+          {
+            "field": "description",
+            "matched_tokens": [
+              "recette"
+            ], # L'extrait
+            "snippet": "pouvez également essayer notre <mark>recette</mark> de mayonnaise sans oeuf."
+          }
+        ], # text_match représente le score
+        "text_match": 578730123365187700,
+        "text_match_info": {
+          "best_field_score": "1108091338752",
+          "best_field_weight": 15,
+          "fields_matched": 1,
+          "score": "578730123365187705",
+          "tokens_matched": 1
+        }
+      }
+    ],
+    "out_of": 63,
+    "page": 1,
+    "request_params": {
+      "collection_name": "recommendations",
+      "per_page": 10,
+      "q": "recette kiwi"
+    },
+    "search_cutoff": false,
+    "search_time_ms": 5
+  },
+```
+
 
 ### Tests
 Pour exécuter les tests :
