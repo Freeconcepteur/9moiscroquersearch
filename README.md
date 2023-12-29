@@ -4,16 +4,16 @@
 ![Moteur de recherche](Images/engine.png)
 
 
-### Introduction
+## Introduction
 Ce projet propose une solution innovante pour l'amélioration des fonctionnalités de recherche dans les applications, en combinant la puissance d'une base de données MySQL avec la rapidité et la flexibilité du moteur de recherche Typesense. Conçu pour offrir une expérience utilisateur améliorée, ce système intègre des technologies avancées pour une récupération rapide et précise des données.
 
-### Caractéristiques
+## Caractéristiques
 Intégration Typesense-MySQL: Synchronisation des données entre MySQL et Typesense pour une recherche optimisée.
 Infrastructure Dockerisée: Utilisation de Docker pour une mise en place et un déploiement aisés du moteur de recherche Typesense.
 Automatisation du Processus de Recherche: Scripts pour l'initialisation automatique et la mise à jour des données de recherche dans Typesense.
 Composants
 
-### Docker Compose
+## Docker Compose
 Le fichier docker-compose.yml facilite la configuration et le déploiement du service Typesense dans un environnement Docker. Cette approche garantit une configuration consistante et une portabilité accrue.
 
 https://typesense.org/docs/guide/install-typesense.html#docker
@@ -39,14 +39,14 @@ mkdir $(pwd)/typesense-data
 docker-compose up
 ```
 
-### Python Libraries
+## Python Libraries
 
 ```pip install -r requirements.txt```
 
-### Fichiers de configuration
+## Fichiers de configuration
 Vous devez modifier le fichier de configuration situé dans __.env__ avec les informations de votre base de données et de votre serveur typesense.
 
-### Script d'Initialisation
+## Script d'Initialisation
 Le script __search_engine_init.py__ joue un rôle crucial en initialisant le moteur de recherche avec des données pertinentes. Il exporte les données de MySQL, les convertit au format JSONL, et les importe dans Typesense.
 
 Dans __search_engine_init.py__, vous devez modifier les tables qui seront chargées dans typesense server.
@@ -59,7 +59,7 @@ export_table_to_jsonl("questions")
 export_table_to_jsonl("recommandations")
 ```
 
-### Fonctions d'Intégration
+## Fonctions d'Intégration
 __functions_db_to_typesense.py__ contient des fonctions essentielles pour exporter les données de MySQL, inférer les schémas de données, et importer ces données dans Typesense, assurant ainsi une intégration fluide.
 
 - __export_table_to_jsonl()__ : convertir la table sélectionnée et ses champs au format JSON.
@@ -141,7 +141,7 @@ si les termes sont: carences en fer, il va rechercher tous les textes contenant 
 ```
 
 
-### Tests
+## Tests
 Pour exécuter les tests :
 
 ```py
@@ -153,7 +153,7 @@ Pour l’exécution de la démonstration suffit d’ouvrir la page ci-dessous da
 
 ``` demo_html/search.html ```
 
-### Contribution
+## Contribution
 Les fiers participants sont:
 * [Jhonatan Caldeira](https://github.com/JhonatanCaldeira)
 * [Cedric Lagrand'court](https://github.com/Freeconcepteur)
@@ -164,5 +164,5 @@ Avec l'aimable participation des formateurs:
 * [Adrien Dulac](https://github.com/dtrckd)
 * [Antonys Schultz](https://github.com/DeVerMyst)
 
-### Licence
+## Licence
 [MIT](https://choosealicense.com/licenses/mit/)
