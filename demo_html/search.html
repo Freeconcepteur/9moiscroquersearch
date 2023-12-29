@@ -53,12 +53,23 @@
 <body>
 <header>
     <h1>Recherche avec Typesense</h1>
-    <input type="text" id="searchBox" placeholder="Entrez votre recherche">
-    <button onclick="search()">Rechercher</button>
+    <input type="text" id="searchInput" placeholder="Entrez votre recherche">
+    <button id="searchButton">Rechercher</button>
 </header>
-<div id="results_json"></div>
+
+<pre id="results_json"></pre>
 <div id="results"></div>
 
-    <script src="search.js"></script>
+<script>
+    document.getElementById('searchButton').addEventListener('click', function() {
+    var query = document.getElementById('searchInput').value;
+    fetch(`http://127.0.0.1:5000/9moisacroquer/SearchCollection?query=${query}`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('results_json').textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script> 
 </body>
 </html>
