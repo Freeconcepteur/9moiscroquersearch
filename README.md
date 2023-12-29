@@ -71,7 +71,7 @@ flask --app server.py --debug run
 ```
 Le server flask permet de configurer des routes (url) qui vont être utilisée:
 
-* soit pour charger une table: 
+* soit pour charger une table,
 exemple: 
 Pour charger la table food on va taper:
 http://localhost:5000/9moisacroquer/UpdateCollection?table_name=food
@@ -84,7 +84,15 @@ si les termes sont: carences en fer, il va rechercher tous les textes contenant 
 
 
 ### Contribution
-[Informations sur la façon de contribuer au projet, y compris les directives de contribution, le processus de soumission des pull requests, etc.]
+Les fiers participants sont:
+* [JhonatanCaldeira](https://github.com/JhonatanCaldeira)
+* [CedricLagrandcour](https://github.com/Freeconcepteur)
+* [JoachimLombardi](https://github.com/JoachimLombardi)
+* [MhoudiniSaïd](https://github.com/mhoudini)
+
+Avec l'aimable participation des formateurs:
+* [AdrienDulac](https://github.com/dtrckd)
+* [AntonysSchultz](https://github.com/DeVerMyst)
 
 ### Licence
 [MIT](https://choosealicense.com/licenses/mit/)
