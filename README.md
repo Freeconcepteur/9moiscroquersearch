@@ -18,7 +18,7 @@ Le fichier docker-compose.yml facilite la configuration et le déploiement du se
 
 https://typesense.org/docs/guide/install-typesense.html#docker
 
-```json
+```py
 version: '3.4'
 services:
   typesense:
@@ -85,6 +85,17 @@ on entre dans la barre de recherche les termes à rechercher et le serveur va fa
 http://localhost:5000/9moisacroquer/SearchCollection
 si les termes sont: carences en fer, il va rechercher tous les textes contenant "fer", "carences" et "carences fer".
 
+### Tests
+Pour exécuter les tests :
+
+```py
+python tests/test.py
+```
+
+### Demo
+Pour l’exécution de la démonstration suffit d’ouvrir la page ci-dessous dans un navigateur:
+
+__demo_html/search.html__
 
 ### Contribution
 Les fiers participants sont:
