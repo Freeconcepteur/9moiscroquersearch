@@ -85,14 +85,14 @@ si les termes sont: carences en fer, il va rechercher tous les textes contenant 
 
 ### Contribution
 Les fiers participants sont:
-* [JhonatanCaldeira](https://github.com/JhonatanCaldeira)
-* [CedricLagrandcour](https://github.com/Freeconcepteur)
-* [JoachimLombardi](https://github.com/JoachimLombardi)
-* [MhoudiniSaïd](https://github.com/mhoudini)
+* [Jhonatan Caldeira](https://github.com/JhonatanCaldeira)
+* [Cedric Lagrandcour](https://github.com/Freeconcepteur)
+* [Joachim Lombardi](https://github.com/JoachimLombardi)
+* [Mhoudini Saïd](https://github.com/mhoudini)
 
 Avec l'aimable participation des formateurs:
-* [AdrienDulac](https://github.com/dtrckd)
-* [AntonysSchultz](https://github.com/DeVerMyst)
+* [Adrien Dulac](https://github.com/dtrckd)
+* [Antonys Schultz](https://github.com/DeVerMyst)
 
 ### Licence
 [MIT](https://choosealicense.com/licenses/mit/)
