@@ -89,7 +89,7 @@ si les termes sont: carences en fer, il va rechercher tous les textes contenant 
 ### Contribution
 Les fiers participants sont:
 * [Jhonatan Caldeira](https://github.com/JhonatanCaldeira)
-* [Cedric Lagrandcour](https://github.com/Freeconcepteur)
+* [Cedric Lagrand'court](https://github.com/Freeconcepteur)
 * [Joachim Lombardi](https://github.com/JoachimLombardi)
 * [Mhoudini Saïd](https://github.com/mhoudini)
 
