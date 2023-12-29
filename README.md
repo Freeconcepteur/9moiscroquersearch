@@ -1,6 +1,9 @@
 # 9moiscroquersearch
 ## Projet de Recherche Optimisée avec Typesense et MySQL
 
+![Moteur de recherche](Images/engine.png)
+
+
 ### Introduction
 Ce projet propose une solution innovante pour l'amélioration des fonctionnalités de recherche dans les applications, en combinant la puissance d'une base de données MySQL avec la rapidité et la flexibilité du moteur de recherche Typesense. Conçu pour offrir une expérience utilisateur améliorée, ce système intègre des technologies avancées pour une récupération rapide et précise des données.
 
